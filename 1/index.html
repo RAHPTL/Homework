@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans" rel="stylesheet">
+	<link rel="icon" href="../favicon.ico">
+	<title>Js | Assignments</title>
+	<style>
+		:root {
+		  --white: #ECF0F1;
+		  --black: #151515;
+		  --blue: #9CD9F0;
+		  --code-peach: #E09690;
+		  --code-green: #CDEE69;
+		  --wrapper-width:1920px;
+		}
+		*{box-sizing: border-box; list-style: none;margin: 0;padding: 0;text-decoration: none;line-height: 1.5;}
+		.space-out{margin-bottom: 20px;}
+		.container{overflow: hidden;max-width: var(--wrapper-width);margin: auto;}
+		.left-pane{background-color: var(--black);height: 100vh;width: 80px;float: left;}
+		.right-pane{height:100vh;width:calc(100% - 80px);background-color: var(--white);overflow-y: auto;padding: 20px;float: left;}
+
+		.nav-item{text-transform: capitalize;font-size: 16px;}
+		.nav-item-link{display: block;text-align: center;transition:all 0.5s ease-in-out;font-size: 24px;padding: 10px;color: var(--white);font-family: 'Open Sans', sans-serif;}
+		.nav-item-link:hover{background-color: var(--white);color: var(--black);}
+		.nav-item-link.active{background-color: var(--white);color: var(--black);}
+
+		.fakeButtons {height: 10px;width: 10px;border-radius: 50%;border: 1px solid var(--black);position: relative;top: 0px;left: 6px;background-color: #ff3b47;border-color: #9d252b;display: inline-block;}
+		.fakeMinimize {left: 11px;background-color: #ffc100;border-color: #9d802c;}
+		.fakeZoom {left: 16px;background-color: #00d742;border-color: #049931;}
+		.fakeMenu {height: 25px;background-color: #bbb;border-top-right-radius: 5px;border-top-left-radius: 5px;}
+
+		.task{color: var(--blue);background-color: var(--black);padding: 20px;border-radius: 5px;font-family: 'Open Sans', sans-serif;font-size: 16px;}
+		.console{color: #CDEE69;background-color: var(--black);padding: 20px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;font-family: 'Inconsolata', monospace;font-size: 18px;}
+		.source-code code,
+		.source-code pre{background-color: var(--black);color: var(--code-peach);font-size: 18px;display: block;font-family: 'Inconsolata', monospace;}
+		.source-code code{padding: 0 20px;}
+		.source-code pre{border-radius: 5px;}
+	</style>
+</head>
+<body>
+	
+	<main class="container">
+		<section class="left-pane">
+			<nav>
+				<ul class="nav-item-wrap">
+					<li class="nav-item"><a class="nav-item-link active" href="#">1</a></li>
+					<li class="nav-item"><a class="nav-item-link" href="#">2</a></li>
+					<li class="nav-item"><a class="nav-item-link" href="#">3</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section class="right-pane">
+
+			<div class="space-out">
+				<div class="task">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quis mollitia ipsa? Eaque, culpa, facilis. Hic, saepe fuga ipsa aliquid obcaecati, similique sint iste sed at maiores officia natus sunt.
+				</div>
+			</div>
+			
+			<div class="source-code space-out">
+				<pre>
+					<code class="code">
+var config = {
+    uiConfig: {
+        msgInput: '.message-input',
+        msgButton: '.message-submit',
+        msgContainer: '.messages',
+        chatToggle: '.chatbot-toggle'
+    },
+    botConfig: {
+        responseTime: (1000 + (Math.random() * 20) * 100),
+        responseAfter: 1
+    }
+}
+var status = {
+    totalMsgCount: 0,
+    userInteracted: false,
+    keyWordResponse:false,
+    botDataIndex:0,
+    keywordsDataIndex:0,
+    botKeywordsResponseIndex:0,
+    isPristine: true
+}
+					</code>
+				</pre>
+			</div>
+
+			<div class="output">
+				<div class=fakeMenu>
+				  <div class="fakeButtons fakeClose"></div>
+				  <div class="fakeButtons fakeMinimize"></div>
+				  <div class="fakeButtons fakeZoom"></div>
+				</div>
+				<div class="console">Silence is Golden!</div>
+			</div>
+
+		</section>
+	</main>
+
+</body>
+</html>
